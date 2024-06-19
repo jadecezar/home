@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            padding: 1rem 2rem;
+        }
+
+        .hero-section {
+            height: 80vh;
+            background: url('bgbg.jpg') no-repeat center center/cover;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s;
+        }
+
+        .hero-section .lead {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1.5s;
+        }
+
+        .hero-section .btn {
+            padding: 0.75rem 1.5rem;
+            font-size: 1.25rem;
+            animation: fadeInUp 2s;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-section .lead {
+                font-size: 1.25rem;
+            }
+        }
+
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            position: fixed;
+            width: 100%;
+            height: 20px;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-dark text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">HTML Project</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero-section d-flex align-items-center justify-content-center">
+            <div class="text-center">
+                <h1 class="display-4">HTML PROJECT</h1>
+                <p class="lead">Welcome to your advanced UI designed project.</p>
+                <a href="#dashboard" class="btn btn-primary btn-lg">Get Started</a>
+            </div>
+        </div>
+
+        <div id="dashboard" class="container my-5">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="resume.jpg" class="card-img-top" alt="Resume">
+                        <div class="card-body">
+                            <h5 class="card-title">Resume</h5>
+                            <p class="card-text">View and edit your resume.</p>
+                            <a href="resume.html" class="btn btn-primary">Go to Resume</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="sari-sari.jpg" class="card-img-top" alt="Sari Sari Store">
+                        <div class="card-body">
+                            <h5 class="card-title">Sari Sari Store</h5>
+                            <p class="card-text">Manage your Sari Sari Store inventory and sales.</p>
+                            <a href="https://github.com/jadecezar/sari-sari" class="btn btn-primary">Go to Store</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="menu.jpg" class="card-img-top" alt="Menu">
+                        <div class="card-body">
+                            <h5 class="card-title">Menu</h5>
+                            <p class="card-text">View and customize your menu options.</p>
+                            <a href="https://jadecezar.github.io/menu/" class="btn btn-primary">Go to Menu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="rog.jpg" class="card-img-top" alt="Record of Grade">
+                        <div class="card-body">
+                            <h5 class="card-title">Record of Grade</h5>
+                            <p class="card-text">Register new users and manage registrations.</p>
+                            <a href="https://github.com/jadecezar/rog" class="btn btn-primary">Go to Registration</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 HTML Project. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
